@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio Pessoal</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+
+  <!-- Cabeçalho fixo -->
+  <header style="position: fixed; top: 0; width: 100%; background-color: #080031; color: rgb(255, 255, 255); padding: 15px; z-index: 1000;">
+    <nav style="display: flex; justify-content: space-around;">
+      <strong style="font-size: 20px;">Matheus Mattos</strong>
+      <a href="#introducao" style="color: rgb(255, 255, 255); text-decoration: none;">Introdução</a>
+      <a href="#habilidades" style="color: rgb(255, 255, 255); text-decoration: none;">Habilidades</a>
+      <a href="#projetos" style="color: rgb(255, 255, 255); text-decoration: none;">Projetos</a>
+      <a href="#contato" style="color: rgb(255, 255, 255); text-decoration: none;">Contato</a>
+    </nav>
+  </header>
+
+  <main style="margin-top: 80px;">
+
+    <!-- Seção Introdução -->
+    <section id="introducao" style="background-color: #080031; padding: 40px; margin-bottom: 40px;">
+      <div style="background-image: url('foto.jpg'); background-size: cover; padding: 50px; text-align: center; color: rgb(0, 0, 0);">
+        <h1 style="font-size: 36px; text-align: center;">Matheus Mattos</h1>
+        <p>Sou um <span style="color: #000000;">desenvolvedor web</span> apaixonado por <span style="color: #000000;">tecnologia e design</span>.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" style="background-color: #2b639b; padding: 40px; margin-bottom: 40px;">
+      <h2 style="font-size: 28px; text-align: left;">🛠️ Habilidades</h2>
+      <ul>
+        <li><span style="color: #ff0000;">HTML</span> e <span style="color: #00ff33;">CSS</span> avançados</li>
+        <li>JavaScript Básico</li>
+        <li>Java Básico</li>
+        <li>Git e GitHub</li>
+        <li>Design básico</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" style="background-color: #f5fffa; padding: 40px; margin-bottom: 40px;">
+      <h2 style="font-size: 28px; text-align: center;">🚀 Projetos</h2>
+
+      <div style="border: 2px solid #20B2AA; padding: 20px; margin-bottom: 20px;">
+        <h3 style="font-size: 24px;">Portfólio Responsivo</h3>
+        <p>Um site pessoal responsivo feito com HTML e JavaScript.</p>
+        <a href="#" target="_blank">Ver Projeto</a>
+      </div>
+
+      <div style="border: 2px dashed #9370DB; padding: 20px;">
+        <h3 style="font-size: 24px;">To-do List com React</h3>
+        <p>Aplicação para gerenciamento de tarefas, com filtro e persistência local.</p>
+        <a href="#" target="_blank">Ver Projeto</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Seção Contato -->
+    <section id="contato" style="background-color: #e6e6fa; padding: 40px; margin-bottom: 40px;">
+      <h2 style="font-size: 28px; text-align: left;">📬 Contato</h2>
+      <form>
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+        <label for="origem">Como nos conheceu?</label><br>
+        <select id="origem" name="origem">
+          <option value="google">Google</option>
+          <option value="indicacao">Indicação</option>
+          <option value="redes">Redes Sociais</option>
+        </select><br><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+    <p>© 2025 Matheus Mattos | Desenvolvedor Web 💻</p>
+    <p>Email: matheusbmtt@gmail.com</p>
+  </footer>
+
+</body>
+</html>
