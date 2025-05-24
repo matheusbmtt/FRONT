@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria de Vídeos - Pets Fofos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .gallery-container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .video-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .video-description {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    @media (min-width: 700px) {
+      .gallery-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center; color: #ff6f61;">🐾 Galeria de Vídeos - Gatinhos e Cachorros</h2>
+
+  <div class="gallery-container">
+
+    <!-- Vídeo 1: Gatinhos -->
+    <div class="video-card">
+      <div class="video-title">Gatinhos brincando com novelo</div>
+      <div class="video-description">Uma dose de fofura com gatinhos brincando com novelos de lã. Ideal para relaxar!</div>
+      <video controls>
+        <source src="https://youtu.be/dLKK21ATpIk" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+
+    <!-- Vídeo 2: Cachorros com legenda -->
+    <div class="video-card">
+      <div class="video-title">Cachorros aprendendo truques</div>
+      <div class="video-description">Veja esses adoráveis cães aprendendo truques com seus tutores. Contém legendas explicativas.</div>
+      <video controls>
+        <source src="https://www.youtube.com/watch?v=3c_UXy70bjw&pp=0gcJCdgAo7VqN5tD.mp4" type="video/mp4">
+        <track src="cachorros-legenda.vtt" kind="subtitles" srclang="pt" label="Português" default>
+        Seu navegador não suporta o vídeo.
+      </video>
+    </div>
+
+  </div>
+
+</body>
+</html>

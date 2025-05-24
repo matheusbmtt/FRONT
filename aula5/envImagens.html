@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Envio de Imagens</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+    }
+
+    .upload-container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #444;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .instructions {
+      font-size: 0.95em;
+      color: #666;
+      margin-bottom: 20px;
+      background: #e9ecef;
+      padding: 10px;
+      border-left: 4px solid #007bff;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="upload-container">
+    <h2>📷 Envie sua Imagem</h2>
+
+    <div class="instructions">
+      Formatos permitidos: <strong>.jpg</strong>, <strong>.png</strong>, <strong>.gif</strong><br>
+      Tamanho máximo: <strong>2 MB</strong>
+    </div>
+
+    <form id="imageForm">
+      <input type="file" id="imageInput" accept=".jpg,.jpeg,.png,.gif" required>
+      <button type="submit">Enviar Imagem</button>
+    </form>
+
+    <div class="message" id="messageBox"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('imageForm');
+    const input = document.getElementById('imageInput');
+    const message = document.getElementById('messageBox');
+    const maxSizeMB = 2;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      message.textContent = "";
+      message.className = "message";
+
+      const file = input.files[0];
+
+      if (!file) {
+        message.textContent = "Por favor, selecione uma imagem.";
+        message.classList.add("error");
+        return;
+      }
+
+      const validTypes = ['image/jpeg', 'image/png', 'image/gif'];
+      if (!validTypes.includes(file.type)) {
+        message.textContent = "Tipo de arquivo inválido. Use .jpg, .png ou .gif.";
+        message.classList.add("error");
+        return;
+      }
+
+      const fileSizeMB = file.size / (1024 * 1024);
+      if (fileSizeMB > maxSizeMB) {
+        message.textContent = `A imagem excede o limite de ${maxSizeMB} MB.`;
+        message.classList.add("error");
+        return;
+      }
+
+      // Sucesso
+      message.textContent = "✅ Imagem validada com sucesso! (Simulação de envio)";
+      message.classList.add("success");
+
+      // Aqui você pode adicionar o código para enviar ao servidor via fetch ou AJAX
+    });
+  </script>
+
+</body>
+</html>
