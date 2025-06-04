@@ -1,0 +1,81 @@
+/* Reset e fonte */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F4F4F4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header com vermelho do Inter */
+  header {
+    background-color: #BA0C2F;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  nav a {
+    color: #FFFFFF;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main */
+  main {
+    padding: 40px 20px;
+  }
+  
+  .perfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .perfil .texto {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .perfil .imagem img {
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer com destaque colorado */
+  footer {
+    background-color: #BA0C2F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
